@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "another-ecommerce app",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "node server/server.js --ignore client",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
@@ -14,13 +15,14 @@
   "author": "group 5",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^20.3.1",
     "concurrently": "^8.2.0",
     "nodemon": "^2.0.21"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
-    "dotenv": "^16.0.3",
+    "dotenv": "^16.1.4",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.0.1"

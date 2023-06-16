@@ -1,8 +1,9 @@
-import path from 'path';
 import express from 'express';
+import { ApolloServer } from 'apollo-server-express';
+import * as path from 'path';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
-
+const connectDB = require('./config/db.js')
 dotenv.config();
 
 
