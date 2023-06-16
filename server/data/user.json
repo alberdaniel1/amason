@@ -1,0 +1,27 @@
+[
+  {
+    "username": "Admin",
+    "password": "password1234",
+    "isAdmin" : "true"
+  },
+  {
+    "username": "Alberto",
+    "password": "Root1234",
+    "isAdmin" : "false"
+  },
+  {
+    "username": "Ciara",
+    "password": "Root1234",
+    "isAdmin" : "false"
+  },
+  {
+    "username": "Luc",
+    "password": "Root1234",
+    "isAdmin" : "false"
+  },
+  {
+    "username": "Tyler",
+    "password": "Root1234",
+    "isAdmin" : "false"
+  }
+]
