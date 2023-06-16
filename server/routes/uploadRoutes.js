@@ -1,6 +1,6 @@
-import path from 'path';
-import express from 'express';
-import multer from 'multer';
+const path = require('path');
+const express = require("express");
+const multer = require('multer');
 
 const router = express.Router();
 
@@ -44,4 +44,4 @@ router.post('/', (req, res) => {
   });
 });
 
-export default router;
+module.exports = router;
