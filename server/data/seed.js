@@ -10,7 +10,7 @@ db.once('open', async () => {
   await Review.deleteMany({});
 
   await Product.create(productSeed);
-//   await User.create(userSeed);
+  await User.create(userSeed);
 
   console.log('Seed worked?');
   process.exit(0);

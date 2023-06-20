@@ -8,7 +8,7 @@ router.route('/:id/reviews').post(protect, createProductReview);
 router.route('/top', getTopProducts);
 router
 .route('/:id')
-.put(getProductById)
+.get(getProductById)
 .put(protect, admin, updateProduct)
 .delete(protect, admin, deleteProduct);
 

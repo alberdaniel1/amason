@@ -1,4 +1,3 @@
-const asyncHandler = require('../middleware/asyncHandler.js');
 const User = require('../models/userModel.js')
 const jwt = require('jsonwebtoken');
 
