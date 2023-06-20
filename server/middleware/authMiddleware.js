@@ -1,5 +1,4 @@
 const jwt = require("jsonwebtoken");
-const asyncHandler = require('./asyncHandler.js');
 const User = require('../models/userModel.js');
 
 module.exports = {

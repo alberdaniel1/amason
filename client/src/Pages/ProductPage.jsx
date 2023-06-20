@@ -1,19 +1,28 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap';
-import { useGetProductDetailsQuery } from '../slices/productApiSlice';
+import { useGetProductDetailsQuery } from '../utilities/productApiSlice';
 import Loader from '../componets/Loader';
 import Message from '../componets/Message';
 import Rating from '../componets/Rating';
+import {addToCart} from '../utilities/cart'
 
 const ProductPage = () => {
   const { id: productId } = useParams();
-
   const {
     data: product,
     isLoading,
     error,
   } = useGetProductDetailsQuery(productId);
+
+  console.log(typeof productId)
+
+  const navigation = useNavigate();
+
+  const updateCart = () =>{
+    addToCart(product._id)
+    navigation('/cart')
+  }
 
   return (
     <>
@@ -73,6 +82,7 @@ const ProductPage = () => {
                       className='btn-block'
                       type='button'
                       disabled={product.countInStock === 0}
+                      onClick={updateCart}
                     >
                       Add To Cart
                     </Button>
