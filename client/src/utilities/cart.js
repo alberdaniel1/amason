@@ -27,7 +27,8 @@ export const addToCart = async (product) => {
     console.log('potato')
 };
 export const removeFromCart = (product) => {
-
+    const cart = localStorage.getItem('cart')
+    console.log(product)
 };
 export const seeCart = () => {
     if (localStorage.getItem('cart') == null){
